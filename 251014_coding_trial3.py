@@ -15,6 +15,25 @@ def f(path):
 
 f([])
 
+-------------------------------------------------------------------
+
+def permutations(nums)
+    res = []
+    def dfs(path):
+        if len(path) == len(nums):
+            res.append(path.copy())
+        for i in range(len(nums)):
+            if nums[i] in path:
+                pass
+            if nums[i] not in path:
+                path.append(nums[i])
+                dfs(path)
+                path.pop()
+    dfs([])
+    return res
+
+print(permutations(nums))
+
 
 -------------------------------------------------------------------
 이틀동안 헤매다가 드디어 이해함!!!
