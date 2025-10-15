@@ -24,3 +24,14 @@ expr_2 = 3*abs(x-2)
 eq = sp.Eq(expr_1,expr_2)
 result = sp.solve(eq,x)
 print(sum(result))
+
+---------------------------------------------------------------------
+
+def dfs(num):
+    if num % 99 == 0 :
+        return num
+    if len(str(num))>30:
+        return None
+    return dfs(int(str(num)+'2'))
+
+print(dfs(2))
