@@ -12,3 +12,14 @@ def dfs(start,path):
 
 dfs(0,[])
 print(res)
+
+-----------------------------------------------------------
+
+from itertools import combinations
+nums = [1,2,3,4,5,6]
+res = []
+
+for (a,b,c,d) in combinations(nums,r=4):
+    res.append((a,b,c,d))
+    
+print(len(res))
